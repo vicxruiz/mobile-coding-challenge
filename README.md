@@ -20,6 +20,16 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
 * The git commit history (and git commit messages) will be also evaluated.
 * Do not forget to include few details about the project in the README (e.g explain choice of libraries, how to run it ...) 
 
+## Technologies to use 
+Choose whatever mobile platform you're most familiar with. 
+
+* For iOS, use Swift. 
+* For Android use Kotlin.
+* Use Clean Architechture pattern
+* Use Reactive Framework RxSwift/RxKotlin
+* Use Unit tests
+* Use UI Tests
+
 ## How to get the data from Github 
 To get the most starred Github repos created in the last 30 days (relative to 2017-11-22), you'll need to call the following endpoint : 
 
