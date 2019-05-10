@@ -54,10 +54,4 @@ Here's what each element represents :
 ![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/row-explained.png)
 
 
-## Technologies to use 
-Choose whatever mobile platform you're most familiar with. 
-
-* For iOS, feel free to use Swift or Objective-C. 
-* For Android, feel free to use Kotlin or Java. 
-
 
