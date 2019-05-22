@@ -20,13 +20,15 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
 * The git commit history (and git commit messages) will be also evaluated.
 * Do not forget to include few details about the project in the README (e.g explain choice of libraries, how to run it ...) 
 
-## Technologies to use 
+## Constraints
 Choose whatever mobile platform you're most familiar with. 
 
+* Follow SOLID principles 
 * For iOS, use Swift. 
 * For Android use Kotlin.
 * Use Realm as local storage
-* Use Clean Architechture pattern
+* Use Clean Architecture pattern (https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+* Use MVVM pattern
 * Use Reactive Framework RxSwift/RxKotlin
 * Use Unit tests
 * Use UI Tests
