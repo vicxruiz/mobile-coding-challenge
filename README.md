@@ -12,7 +12,7 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
   * Repository description 
   * Numbers of stars for the repo. 
   * Username and avatar of the owner. 
-* [BONUS] As a User I should be able to keep scrolling and new results should appear (pagination).
+* [BONUS] As a User I should be able to see latest results when app is offline.
 
 ## Things to keep in mind 🚨
 * Features are less important than code quality. Put more focus on code quality and less on speed and number of features implemented. 
@@ -25,6 +25,7 @@ Choose whatever mobile platform you're most familiar with.
 
 * For iOS, use Swift. 
 * For Android use Kotlin.
+* Use Realm as local storage
 * Use Clean Architechture pattern
 * Use Reactive Framework RxSwift/RxKotlin
 * Use Unit tests
