@@ -37,5 +37,27 @@ class RepositoryTableViewCell: UITableViewCell {
         repoDescriptionLabel.text = repository.description
         repoStarCountLable.text = "\(repository.stars)"
         usernameLabel.text = repository.owner.login
+        setImage()
     }
+    
+    private func setImage() {
+        guard let pictureURL = repository?.owner.avatar_url,
+            let url = URL(string: pictureURL) else { return }
+        let request = URLRequest(url: url)
+        
+        dataGetter?.fetchData(with: request, requestID: repository?.owner.avatar_url) { [weak self] (requestID, data, error) in
+            guard error == nil else { return }
+            guard requestID == self?.repository?.owner.avatar_url else { return }
+            guard let data = data else { return }
+            
+            //converting data to image
+            let image = UIImage(data: data)
+            
+            DispatchQueue.main.async {
+                self?.userImageView.image = image
+                self?.layoutSubviews()
+            }
+        }
+    }
+
 }
