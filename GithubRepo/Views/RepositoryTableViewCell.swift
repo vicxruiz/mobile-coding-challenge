@@ -35,6 +35,6 @@ class RepositoryTableViewCell: UITableViewCell {
         //setting cell labels to object properties
         repoTitleLabel.text = repository.name
         repoDescriptionLabel.text = repository.description
-        repoStarCountLable.text = "\(repository.stargazers_count)"
+        repoStarCountLable.text = "\(repository.stars)"
     }
 }
