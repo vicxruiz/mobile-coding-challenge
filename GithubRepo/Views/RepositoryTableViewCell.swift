@@ -36,5 +36,6 @@ class RepositoryTableViewCell: UITableViewCell {
         repoTitleLabel.text = repository.name
         repoDescriptionLabel.text = repository.description
         repoStarCountLable.text = "\(repository.stars)"
+        usernameLabel.text = repository.owner.login
     }
 }

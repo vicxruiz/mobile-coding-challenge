@@ -17,9 +17,9 @@ struct Items: Codable {
 
 struct Repository: Codable {
     let name: String
-    let description: String
-    let stars: Int
     let owner: Details
+    let description: String?
+    let stars: Int
     private enum CodingKeys: String, CodingKey {
         case stars = "stargazers_count"
         case name
@@ -31,12 +31,6 @@ struct Repository: Codable {
 struct Details: Codable {
     let login: String
     let avatar_url: String
-    
-    private enum CodingKeys: String, CodingKey {
-        case login
-        case avatar_url
-    }
-
 }
 
 
