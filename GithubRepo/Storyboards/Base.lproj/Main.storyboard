@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="162" id="lgs-rD-Liz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="162" id="lgs-rD-Liz" customClass="RepositoryTableViewCell" customModule="GithubRepo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="162"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lgs-rD-Liz" id="W21-jr-rjU">
@@ -58,13 +58,13 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="aL9-fV-fYW">
                                             <rect key="frame" x="127" y="11" width="279" height="63"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMF-r6-GMI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMF-r6-GMI">
                                                     <rect key="frame" x="0.0" y="0.0" width="279" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfx-2H-V7e">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfx-2H-V7e">
                                                     <rect key="frame" x="0.0" y="42.5" width="279" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -85,6 +85,13 @@
                                         <constraint firstAttribute="trailing" secondItem="aL9-fV-fYW" secondAttribute="trailing" constant="8" id="xSR-GB-CQy"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="repoDescriptionLabel" destination="gfx-2H-V7e" id="wdD-sQ-L93"/>
+                                    <outlet property="repoStarCountLable" destination="wqs-Va-L36" id="ri8-wr-8Xh"/>
+                                    <outlet property="repoTitleLabel" destination="MMF-r6-GMI" id="nTH-Jo-Yrv"/>
+                                    <outlet property="userImageView" destination="ayV-Ii-OZW" id="pnv-Gv-RDR"/>
+                                    <outlet property="usernameLabel" destination="NGS-Kt-AhY" id="ayq-NN-C9G"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
