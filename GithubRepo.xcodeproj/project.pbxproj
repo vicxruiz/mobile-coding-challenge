@@ -13,6 +13,7 @@
 		573AD9F222B0292500AB3941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573AD9F122B0292500AB3941 /* LaunchScreen.storyboard */; };
 		573AD9F422B02CD500AB3941 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AD9F322B02CD500AB3941 /* Repository.swift */; };
 		573AD9F622B03AE000AB3941 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AD9F522B03AE000AB3941 /* DataGetter.swift */; };
+		57D2C6D122B03BD7006D6F4E /* RepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6D022B03BD7006D6F4E /* RepositoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		573AD9F122B0292500AB3941 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		573AD9F322B02CD500AB3941 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		573AD9F522B03AE000AB3941 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
+		57D2C6D022B03BD7006D6F4E /* RepositoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		573AD9D722B025DA00AB3941 /* GithubRepo */ = {
 			isa = PBXGroup;
 			children = (
+				573AD9F722B03B7800AB3941 /* Model Controllers */,
 				573AD9F022B0288600AB3941 /* Storyboards */,
 				573AD9EF22B0286E00AB3941 /* Supporting */,
 				573AD9EE22B0286600AB3941 /* Resources */,
@@ -121,6 +124,14 @@
 				573AD9F122B0292500AB3941 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		573AD9F722B03B7800AB3941 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57D2C6D022B03BD7006D6F4E /* RepositoryController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				573AD9F622B03AE000AB3941 /* DataGetter.swift in Sources */,
+				57D2C6D122B03BD7006D6F4E /* RepositoryController.swift in Sources */,
 				573AD9D922B025DA00AB3941 /* AppDelegate.swift in Sources */,
 				573AD9F422B02CD500AB3941 /* Repository.swift in Sources */,
 			);
