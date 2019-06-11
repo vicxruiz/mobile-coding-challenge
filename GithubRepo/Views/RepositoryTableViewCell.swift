@@ -37,5 +37,4 @@ class RepositoryTableViewCell: UITableViewCell {
         repoDescriptionLabel.text = repository.description
         repoStarCountLable.text = "\(repository.stargazers_count)"
     }
-    
 }
