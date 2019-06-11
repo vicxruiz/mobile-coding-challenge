@@ -17,6 +17,7 @@ class RepositoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetch()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,5 +33,17 @@ class RepositoryTableViewController: UITableViewController {
         repoCell.repository = repository
         
         return cell
+    }
+    
+    func fetch() {
+        repositoryController.fetch { (error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print(error)
+                }
+                self.tableView.reloadData()
+                print("Table reloaded")
+            }
+        }
     }
 }
