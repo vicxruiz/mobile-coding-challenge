@@ -14,6 +14,7 @@ class RepositoryController {
     let dataGetter = DataGetter()
     let baseURL = URL(string: "https://api.github.com")!
     var repositories: [Repository] = []
+    var repository: Repository?
     
     enum HTTPMethod: String {
         case get = "GET"

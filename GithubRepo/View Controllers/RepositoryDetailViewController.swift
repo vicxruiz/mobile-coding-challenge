@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 import WebKit
 class RepositoryDetailViewController: UIViewController, WKUIDelegate {
-    var repository: Repository?
-    
+    var repositoryController: RepositoryController?
+    var repository: Repository? {
+        return repositoryController?.repository
+    }
     var webView: WKWebView!
     
     override func loadView() {
@@ -23,9 +25,17 @@ class RepositoryDetailViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myURL = URL(string: "")
+        guard let repository = repository else {
+            print("No repository")
+            return
+        }
+        
+        self.title = repository.name
+
+        let repoURL = repository.website 
+        
+        let myURL = URL(string: "\(repoURL)")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
-    
 }

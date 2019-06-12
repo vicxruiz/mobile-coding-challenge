@@ -46,4 +46,20 @@ class RepositoryTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RepoDetail" {
+            guard let destinationVC = segue.destination as? RepositoryDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow
+                else { return }
+            
+            repositoryController.repository = repositoryController.repositories[indexPath.row]
+            destinationVC.repositoryController = repositoryController
+        }
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        navigationItem.backBarButtonItem?.tintColor = .white
+        
+    }
 }

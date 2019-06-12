@@ -92,7 +92,7 @@
                                     <outlet property="repoTitleLabel" destination="MMF-r6-GMI" id="nTH-Jo-Yrv"/>
                                     <outlet property="userImageView" destination="ayV-Ii-OZW" id="pnv-Gv-RDR"/>
                                     <outlet property="usernameLabel" destination="NGS-Kt-AhY" id="ayq-NN-C9G"/>
-                                    <segue destination="RGE-lx-BvH" kind="show" id="snn-w1-i2v"/>
+                                    <segue destination="RGE-lx-BvH" kind="show" identifier="RepoDetail" id="snn-w1-i2v"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -107,30 +107,14 @@
             </objects>
             <point key="canvasLocation" x="3039.130434782609" y="48.883928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Repository Detail View Controller-->
         <scene sceneID="ZCW-Lp-DQz">
             <objects>
-                <viewController id="RGE-lx-BvH" sceneMemberID="viewController">
+                <viewController id="RGE-lx-BvH" customClass="RepositoryDetailViewController" customModule="GithubRepo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RpV-2e-Q1n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14w-er-389">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="14w-er-389" firstAttribute="leading" secondItem="se7-YK-eP1" secondAttribute="leading" id="OHq-2U-6fj"/>
-                            <constraint firstAttribute="bottom" secondItem="14w-er-389" secondAttribute="bottom" id="ORN-oC-Lly"/>
-                            <constraint firstItem="14w-er-389" firstAttribute="top" secondItem="se7-YK-eP1" secondAttribute="top" id="fPW-gC-iq0"/>
-                            <constraint firstItem="14w-er-389" firstAttribute="trailing" secondItem="se7-YK-eP1" secondAttribute="trailing" id="x9z-xE-2az"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="se7-YK-eP1"/>
                     </view>
                     <navigationItem key="navigationItem" id="oAx-ga-0n3">
