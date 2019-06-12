@@ -120,6 +120,9 @@
                     <navigationItem key="navigationItem" id="oAx-ga-0n3">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="aIB-fE-dJB">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="RGE-lx-BvH" id="w4w-gF-cUK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -200,13 +203,13 @@
         <!--Your Repos-->
         <scene sceneID="uoc-Mz-1aT">
             <objects>
-                <tableViewController id="jrC-QQ-DrG" sceneMemberID="viewController">
+                <tableViewController id="jrC-QQ-DrG" customClass="UserRepositoriesTableViewController" customModule="GithubRepo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iwu-ud-Us9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoCell" rowHeight="162" id="t0p-Mx-Wup" customClass="RepositoryTableViewCell" customModule="GithubRepo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoSavedCell" rowHeight="162" id="t0p-Mx-Wup" customClass="SavedRepoTableViewCell" customModule="GithubRepo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="162"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t0p-Mx-Wup" id="mOg-R9-H4Y">
@@ -274,11 +277,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="repoDescriptionLabel" destination="T6d-KX-4qs" id="pQ7-6p-4G9"/>
-                                    <outlet property="repoStarCountLable" destination="eAB-zi-epM" id="mAi-gS-JwR"/>
-                                    <outlet property="repoTitleLabel" destination="oeh-vJ-zx0" id="dhD-hD-j7P"/>
+                                    <outlet property="repoDescriptionLabel" destination="T6d-KX-4qs" id="6gs-b8-rzp"/>
+                                    <outlet property="repoNameLabel" destination="oeh-vJ-zx0" id="SlH-XQ-XF7"/>
+                                    <outlet property="starCountLabel" destination="eAB-zi-epM" id="IoJ-hS-AjC"/>
                                     <outlet property="userImageView" destination="OEM-tC-6zd" id="t3V-DS-1DD"/>
-                                    <outlet property="usernameLabel" destination="AS6-Sx-VrP" id="xZo-2M-iWO"/>
+                                    <outlet property="usernameLabel" destination="AS6-Sx-VrP" id="kvR-e5-q40"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

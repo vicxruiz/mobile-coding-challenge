@@ -29,7 +29,6 @@ class RepositoryDetailViewController: UIViewController, WKUIDelegate {
             print("No repository")
             return
         }
-        
         self.title = repository.name
 
         let repoURL = repository.website
@@ -38,8 +37,9 @@ class RepositoryDetailViewController: UIViewController, WKUIDelegate {
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
-    
+
     @IBAction func saveButtonPressed(_ sender: Any) {
-        
+        repositoryController?.save()
+        navigationController?.popViewController(animated: true)
     }
 }

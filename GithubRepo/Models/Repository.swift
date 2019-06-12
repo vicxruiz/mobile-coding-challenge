@@ -15,13 +15,18 @@ struct Items: Codable {
     }
 }
 
-struct Repository: Codable {
+struct Repository: Codable, Equatable {
+    static func == (lhs: Repository, rhs: Repository) -> Bool {
+        return lhs.id == rhs.id
+    }
+    let id: Int
     let name: String
     let owner: Details
     let description: String?
     let stars: Int
     let website: String
     private enum CodingKeys: String, CodingKey {
+        case id
         case stars = "stargazers_count"
         case name
         case description

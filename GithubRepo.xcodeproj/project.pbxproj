@@ -18,6 +18,8 @@
 		57D2C6D522B042A3006D6F4E /* RepositoryTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6D422B042A3006D6F4E /* RepositoryTableVIewController.swift */; };
 		57D2C6D722B07B6F006D6F4E /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6D622B07B6F006D6F4E /* RepositoryDetailViewController.swift */; };
 		57D2C6D922B08143006D6F4E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6D822B08143006D6F4E /* Service.swift */; };
+		57D2C6DB22B08523006D6F4E /* UserRepositoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6DA22B08523006D6F4E /* UserRepositoriesTableViewController.swift */; };
+		57D2C6DD22B085D9006D6F4E /* SavedRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6DC22B085D9006D6F4E /* SavedRepoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		57D2C6D422B042A3006D6F4E /* RepositoryTableVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableVIewController.swift; sourceTree = "<group>"; };
 		57D2C6D622B07B6F006D6F4E /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 		57D2C6D822B08143006D6F4E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		57D2C6DA22B08523006D6F4E /* UserRepositoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoriesTableViewController.swift; sourceTree = "<group>"; };
+		57D2C6DC22B085D9006D6F4E /* SavedRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRepoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			children = (
 				57D2C6D422B042A3006D6F4E /* RepositoryTableVIewController.swift */,
 				57D2C6D622B07B6F006D6F4E /* RepositoryDetailViewController.swift */,
+				57D2C6DA22B08523006D6F4E /* UserRepositoriesTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				57D2C6D222B03DDD006D6F4E /* RepositoryTableViewCell.swift */,
+				57D2C6DC22B085D9006D6F4E /* SavedRepoTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,8 +224,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				573AD9F622B03AE000AB3941 /* DataGetter.swift in Sources */,
+				57D2C6DD22B085D9006D6F4E /* SavedRepoTableViewCell.swift in Sources */,
 				57D2C6D922B08143006D6F4E /* Service.swift in Sources */,
 				57D2C6D522B042A3006D6F4E /* RepositoryTableVIewController.swift in Sources */,
+				57D2C6DB22B08523006D6F4E /* UserRepositoriesTableViewController.swift in Sources */,
 				57D2C6D122B03BD7006D6F4E /* RepositoryController.swift in Sources */,
 				573AD9D922B025DA00AB3941 /* AppDelegate.swift in Sources */,
 				57D2C6D322B03DDD006D6F4E /* RepositoryTableViewCell.swift in Sources */,

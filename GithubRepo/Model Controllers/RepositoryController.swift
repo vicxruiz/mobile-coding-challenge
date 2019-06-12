@@ -15,6 +15,7 @@ class RepositoryController {
     let baseURL = URL(string: "https://api.github.com")!
     var repositories: [Repository] = []
     var repository: Repository?
+    var savedRepos: [Repository] = []
     
     enum HTTPMethod: String {
         case get = "GET"
@@ -57,5 +58,50 @@ class RepositoryController {
         }
     }
     
+    //method to save to array
+    func save() {
+        guard let repository = repository else { return }
+        savedRepos.append(repository)
+        savedRepos = savedRepos.sorted { $0.id < $1.id }
+        self.repository = nil
+        saveToPersistentStore()
+    }
     
+    //method to delete pokemon
+    func delete(repository: Repository) {
+        guard let index = savedRepos.index(of: repository) else { return }
+        savedRepos.remove(at: index)
+        saveToPersistentStore()
+    }
+    
+    //saves data to url in document
+    func saveToPersistentStore() {
+        let plistEncoder = PropertyListEncoder()
+        do {
+            let data = try plistEncoder.encode(savedRepos)
+            guard let repositoryFileURL = repositoryFileURL else { return }
+            try data.write(to: repositoryFileURL)
+        } catch {
+            NSLog("Error enconding items: \(error)")
+        }
+    }
+    
+    func loadFromPersistentStore() {
+        do {
+            guard let repositoryFileURL = repositoryFileURL,
+                FileManager.default.fileExists(atPath: repositoryFileURL.path) else  { return }
+            let data = try Data(contentsOf: repositoryFileURL)
+            let plistDecoder = PropertyListDecoder()
+            self.savedRepos = try plistDecoder.decode([Repository].self, from: data)
+        } catch {
+            print(error)
+        }
+    }
+    
+    var repositoryFileURL: URL? {
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let fileName = "repositories.plist"
+        return documentDirectory?.appendingPathComponent(fileName)
+    }
+
 }
