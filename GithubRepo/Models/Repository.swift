@@ -20,11 +20,13 @@ struct Repository: Codable {
     let owner: Details
     let description: String?
     let stars: Int
+    let website: String
     private enum CodingKeys: String, CodingKey {
         case stars = "stargazers_count"
         case name
         case description
         case owner
+        case website = "html_url"
     }
 }
 

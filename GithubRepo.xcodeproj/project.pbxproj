@@ -16,6 +16,7 @@
 		57D2C6D122B03BD7006D6F4E /* RepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6D022B03BD7006D6F4E /* RepositoryController.swift */; };
 		57D2C6D322B03DDD006D6F4E /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6D222B03DDD006D6F4E /* RepositoryTableViewCell.swift */; };
 		57D2C6D522B042A3006D6F4E /* RepositoryTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6D422B042A3006D6F4E /* RepositoryTableVIewController.swift */; };
+		57D2C6D722B07B6F006D6F4E /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2C6D622B07B6F006D6F4E /* RepositoryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		57D2C6D022B03BD7006D6F4E /* RepositoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryController.swift; sourceTree = "<group>"; };
 		57D2C6D222B03DDD006D6F4E /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		57D2C6D422B042A3006D6F4E /* RepositoryTableVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableVIewController.swift; sourceTree = "<group>"; };
+		57D2C6D622B07B6F006D6F4E /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				57D2C6D422B042A3006D6F4E /* RepositoryTableVIewController.swift */,
+				57D2C6D622B07B6F006D6F4E /* RepositoryDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				57D2C6D122B03BD7006D6F4E /* RepositoryController.swift in Sources */,
 				573AD9D922B025DA00AB3941 /* AppDelegate.swift in Sources */,
 				57D2C6D322B03DDD006D6F4E /* RepositoryTableViewCell.swift in Sources */,
+				57D2C6D722B07B6F006D6F4E /* RepositoryDetailViewController.swift in Sources */,
 				573AD9F422B02CD500AB3941 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
