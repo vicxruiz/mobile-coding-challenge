@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import WebKit
 class RepositoryDetailViewController: UIViewController, WKUIDelegate {
-    
     //Mark: Properties
     
     //Checking for data

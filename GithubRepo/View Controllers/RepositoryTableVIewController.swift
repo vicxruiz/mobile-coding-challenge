@@ -11,7 +11,6 @@ import UIKit
 
 
 class RepositoryTableViewController: UITableViewController {
-    
     //MARK: Properties
     
     //checking data

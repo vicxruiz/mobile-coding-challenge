@@ -60,5 +60,4 @@ class RepositoryTableViewCell: UITableViewCell {
             }
         }
     }
-
 }

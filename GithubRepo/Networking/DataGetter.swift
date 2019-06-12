@@ -9,7 +9,6 @@
 import Foundation
 
 class DataGetter {
-    
     //setting constants
     enum HTTPError: Error {
         case non200StatusCode
@@ -40,5 +39,4 @@ class DataGetter {
             completion(requestID, data, nil)
             }.resume()
     }
-    
 }

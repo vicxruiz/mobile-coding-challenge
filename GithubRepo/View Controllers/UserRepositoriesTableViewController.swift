@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class UserRepositoriesTableViewController: UITableViewController {
-    
     //Mark: Properties
     
     //checking for data
@@ -38,11 +37,10 @@ class UserRepositoriesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepoSavedCell", for: indexPath) as! SavedRepoTableViewCell
         cell.dataGetter = dataGetter
         let repository = repositoryController.savedRepos[indexPath.row]
-        
+
         //updating attributes
         cell.repository = repository
         
         return cell
     }
-
 }

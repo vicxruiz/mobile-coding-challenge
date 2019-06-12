@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class SavedRepoTableViewCell: UITableViewCell {
-    
     //MARK: Properties
     
     //checking data
@@ -51,7 +50,7 @@ class SavedRepoTableViewCell: UITableViewCell {
             guard error == nil else { return }
             guard requestID == self?.repository?.owner.avatar_url else { return }
             guard let data = data else { return }
-            
+        
             //converting data to image
             let image = UIImage(data: data)
             
