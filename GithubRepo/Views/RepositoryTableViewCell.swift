@@ -40,6 +40,7 @@ class RepositoryTableViewCell: UITableViewCell {
         setImage()
     }
     
+    //Gets Image Data and sets outlets
     private func setImage() {
         guard let pictureURL = repository?.owner.avatar_url,
             let url = URL(string: pictureURL) else { return }

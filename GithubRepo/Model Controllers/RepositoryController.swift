@@ -10,11 +10,15 @@ import Foundation
 
 class RepositoryController {
     
+    //MARK: Properties
+    
     //passing data
     let dataGetter = DataGetter()
     let baseURL = URL(string: "https://api.github.com")!
     var repositories: [Repository] = []
     var repository: Repository?
+    
+    //User Saved Data
     var savedRepos: [Repository] = []
     
     enum HTTPMethod: String {
@@ -24,17 +28,24 @@ class RepositoryController {
         case delete = "DELETE"
     }
     
+    //MARK: API
+    
+    //api call
     func fetch(completion: @escaping (Error?) -> Void) {
+        //forms url
         var components = URLComponents()
         components.scheme = "https"
         components.host = "api.github.com"
         components.path = "/search/repositories"
         
+        //adds query items
         let queryItemQuery = URLQueryItem(name: "q", value: "created:>2017-10-22")
         let querySortItemQuery = URLQueryItem(name: "sort", value: "stars")
         let queryOrderItemQuery = URLQueryItem(name: "order", value: "desc")
         components.queryItems = [queryItemQuery, querySortItemQuery, queryOrderItemQuery]
         print(components.url ?? "no url")
+        
+        //Makes request
         var request = URLRequest(url: components.url!)
         request.httpMethod = HTTPMethod.get.rawValue
         
@@ -57,6 +68,8 @@ class RepositoryController {
             }
         }
     }
+    
+    //MARK: Persistence
     
     //method to save to array
     func save() {
@@ -86,6 +99,7 @@ class RepositoryController {
         }
     }
     
+    //loads data from path
     func loadFromPersistentStore() {
         do {
             guard let repositoryFileURL = repositoryFileURL,
@@ -98,6 +112,7 @@ class RepositoryController {
         }
     }
     
+    //makes file path
     var repositoryFileURL: URL? {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         let fileName = "repositories.plist"

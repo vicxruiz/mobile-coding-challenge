@@ -10,8 +10,15 @@ import Foundation
 import UIKit
 
 class UserRepositoriesTableViewController: UITableViewController {
+    
+    //Mark: Properties
+    
+    //checking for data
     var repositoryController = RepositoryController()
     var dataGetter = DataGetter()
+    
+    //MARK: View
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,6 +29,7 @@ class UserRepositoriesTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    //MARK: Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositoryController.savedRepos.count
     }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Model Structure for JSON Decoding
 struct Items: Codable {
     let items: [Repository]
     private enum CodingKeys: String, CodingKey {

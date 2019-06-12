@@ -10,18 +10,16 @@ import Foundation
 import UIKit
 import WebKit
 class RepositoryDetailViewController: UIViewController, WKUIDelegate {
+    
+    //Mark: Properties
+    
+    //Checking for data
     var repositoryController: RepositoryController?
     var repository: Repository? {
         return repositoryController?.repository
     }
-    var webView: WKWebView!
     
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        view = webView
-    }
+    var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +35,15 @@ class RepositoryDetailViewController: UIViewController, WKUIDelegate {
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
+    
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
 
+    //persistence
     @IBAction func saveButtonPressed(_ sender: Any) {
         repositoryController?.save()
         navigationController?.popViewController(animated: true)

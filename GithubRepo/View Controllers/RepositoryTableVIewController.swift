@@ -12,6 +12,9 @@ import UIKit
 
 class RepositoryTableViewController: UITableViewController {
     
+    //MARK: Properties
+    
+    //checking data
     let repositoryController = RepositoryController()
     let dataGetter = DataGetter()
     
@@ -19,6 +22,8 @@ class RepositoryTableViewController: UITableViewController {
         super.viewDidLoad()
         fetch()
     }
+    
+    //MARK: Data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositoryController.repositories.count
@@ -35,6 +40,7 @@ class RepositoryTableViewController: UITableViewController {
         return cell
     }
     
+    //Fetches data
     func fetch() {
         repositoryController.fetch { (error) in
             DispatchQueue.main.async {
@@ -47,15 +53,17 @@ class RepositoryTableViewController: UITableViewController {
         }
     }
     
+    //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RepoDetail" {
             guard let destinationVC = segue.destination as? RepositoryDetailViewController,
                 let indexPath = tableView.indexPathForSelectedRow
                 else { return }
-            
+            //Passing data to destination vc
             repositoryController.repository = repositoryController.repositories[indexPath.row]
             destinationVC.repositoryController = repositoryController
         }
+        //UI
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
         navigationItem.backBarButtonItem = backItem

@@ -11,12 +11,16 @@ import UIKit
 
 class SavedRepoTableViewCell: UITableViewCell {
     
+    //MARK: Properties
+    
+    //checking data
     var dataGetter: DataGetter?
     var repository: Repository? {
         didSet {
             updateViews()
         }
     }
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var repoDescriptionLabel: UILabel!
@@ -37,6 +41,7 @@ class SavedRepoTableViewCell: UITableViewCell {
         setImage()
     }
     
+    //Gets image data
     private func setImage() {
         guard let pictureURL = repository?.owner.avatar_url,
             let url = URL(string: pictureURL) else { return }
